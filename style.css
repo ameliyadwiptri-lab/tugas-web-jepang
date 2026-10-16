@@ -1,0 +1,463 @@
+/* PENGATURAN DASAR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 115px;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: #c0ad91;
+    color: #493b30;
+    line-height: 1.8;
+    padding-top: 95px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* NAVIGASI TETAP DI ATAS */
+nav {
+    width: 90%;
+    max-width: 1150px;
+    margin: 0;
+    padding: 16px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    background-color: #eee3d0;
+    border: 1px solid #d1bea2;
+    border-radius: 50px;
+
+    position: fixed;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+
+    box-shadow: 0 5px 18px rgba(76, 52, 30, 0.12);
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 700;
+    color: #654a35;
+    white-space: nowrap;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    display: inline-block;
+    font-size: 14px;
+    color: #654a35;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #a0784e;
+}
+
+/* HALAMAN PEMBUKA */
+.hero {
+    padding: 65px 8%;
+}
+
+.hero-content {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.subjudul {
+    color: #8a6748;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero-text h1 {
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1.25;
+    color: #5c4230;
+    margin-bottom: 18px;
+}
+
+.hero-text > p {
+    margin-bottom: 16px;
+}
+
+/* TOMBOL DI BAWAH TEKS PEMBUKA */
+.tombol-mulai {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background-color: #654a35;
+    color: #fff4e5;
+    border: 1px solid #654a35;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.tombol-mulai:hover {
+    background-color: #8a6748;
+    transform: translateY(-2px);
+}
+
+.hero-image {
+    background-color: #eee3d0;
+    padding: 16px;
+    border: 1px solid #d4c1a6;
+    border-radius: 28px;
+    box-shadow: 0 10px 25px rgba(76, 52, 30, 0.12);
+}
+
+.hero-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    background-color: #c0ad91;
+    border-radius: 18px;
+}
+
+.image-caption {
+    text-align: center;
+    padding: 18px 8px 8px;
+}
+
+.image-caption p:first-child {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* JUDUL SETIAP BAGIAN */
+section:not(.hero) {
+    padding: 65px 8%;
+    scroll-margin-top: 110px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-heading h2 {
+    font-size: 30px;
+    color: #5c4230;
+    margin: 5px 0 10px;
+}
+
+/* PENGENALAN KELUARGA */
+#pengenalan {
+    background-color: #d0bea4;
+}
+
+.introduction-card {
+    max-width: 800px;
+    margin: auto;
+    padding: 35px;
+    background-color: #eee3d0;
+    border: 1px solid #d2bda0;
+    border-radius: 24px;
+    box-shadow: 0 8px 20px rgba(76, 52, 30, 0.08);
+    text-align: center;
+}
+
+.introduction-card h3 {
+    font-size: 24px;
+    color: #5c4230;
+}
+
+.intro-item {
+    padding: 18px 5px;
+    border-bottom: 1px solid #ddcbb2;
+}
+
+.intro-item:last-child {
+    border-bottom: none;
+}
+
+/* TEKS JEPANG, ROMAJI, INDONESIA */
+.japanese {
+    font-size: 16px;
+    color: #59412f;
+    font-weight: 500;
+}
+
+.romaji {
+    color: #8a6748;
+    font-size: 14px;
+}
+
+.translation,
+.indo {
+    color: #75604d;
+    font-size: 14px;
+}
+
+/* BAGAN KELUARGA */
+#keluarga {
+    background-color: #c0ad91;
+}
+
+.family-tree {
+    max-width: 850px;
+    margin: auto;
+}
+
+.parents,
+.children {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+}
+
+.member-card {
+    width: 260px;
+    padding: 18px;
+    text-align: center;
+    background-color: #eee3d0;
+    border: 1px solid #d2bda0;
+    border-radius: 22px;
+    box-shadow: 0 8px 20px rgba(76, 52, 30, 0.1);
+    transition: transform 0.3s;
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+}
+
+.member-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.member-card h3 {
+    font-size: 23px;
+    color: #5c4230;
+}
+
+.tree-connector {
+    width: 2px;
+    height: 40px;
+    background-color: #8a6748;
+    margin: auto;
+}
+
+/* DESKRIPSI KELUARGA */
+#cerita {
+    background-color: #d0bea4;
+}
+
+.story-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.story-card {
+    padding: 25px;
+    background-color: #eee3d0;
+    border: 1px solid #d2bda0;
+    border-radius: 22px;
+    box-shadow: 0 8px 20px rgba(76, 52, 30, 0.08);
+}
+
+.story-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+    margin-bottom: 18px;
+}
+
+.story-card h3 {
+    font-size: 25px;
+    color: #5c4230;
+}
+
+.story-card > p {
+    margin-bottom: 8px;
+}
+
+.story-card .indo {
+    margin-bottom: 20px;
+}
+
+/* PENUTUP */
+.closing {
+    text-align: center;
+    background-color: #8b7055;
+    color: #fff4e5;
+}
+
+.closing .japanese {
+    font-size: 22px;
+    color: #fff4e5;
+}
+
+.closing .romaji,
+.closing .indo {
+    color: #f1e0cb;
+}
+
+/* FOOTER */
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #59412f;
+    color: #eee3d0;
+    font-size: 14px;
+}
+
+/* TAMPILAN TABLET DAN HP */
+@media (max-width: 768px) {
+    body {
+        padding-top: 125px;
+    }
+
+    html {
+        scroll-padding-top: 145px;
+    }
+
+    nav {
+        width: 94%;
+        top: 10px;
+        padding: 12px 18px;
+        flex-direction: column;
+        gap: 8px;
+        border-radius: 22px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .hero {
+        padding: 35px 5%;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .hero-image img {
+        height: 250px;
+    }
+
+    section:not(.hero) {
+        padding: 45px 5%;
+        scroll-margin-top: 140px;
+    }
+
+    .section-heading h2 {
+        font-size: 25px;
+    }
+
+    .introduction-card {
+        padding: 22px 15px;
+    }
+
+    .parents,
+    .children {
+        gap: 15px;
+    }
+
+    .member-card {
+        width: 50%;
+        min-width: 0;
+        padding: 12px;
+    }
+
+    .member-card img {
+        height: 180px;
+    }
+
+    .story-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .story-card {
+        padding: 20px;
+    }
+
+    .story-card img {
+        height: 260px;
+    }
+}
+
+/* HP KECIL */
+@media (max-width: 380px) {
+    nav {
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 17px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .parents,
+    .children {
+        gap: 10px;
+    }
+
+    .member-card {
+        padding: 8px;
+    }
+
+    .member-card img {
+        height: 145px;
+    }
+
+    .tombol-mulai {
+        padding: 10px 18px;
+    }
+}
